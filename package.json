@@ -1,0 +1,15 @@
+{
+  "name": "id3a",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Pitch Studio — type an idea, get a multimodal pitch pack (text, image, diagram, video, music, voice)",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm -w server run dev\" \"npm -w client run dev\"",
+    "build": "npm -w client run build",
+    "start": "npm -w server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
